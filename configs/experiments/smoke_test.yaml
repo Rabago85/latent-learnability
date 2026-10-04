@@ -1,0 +1,14 @@
+experiment:
+  name: smoke_test
+  seed: 42
+
+dataset:
+  name: mnist
+
+prior:
+  type: gaussian
+
+vae:
+  latent_channels: 128
+  latent_height: 4
+  latent_width: 4

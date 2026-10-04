@@ -1,0 +1,69 @@
+[project]
+name = "latent-learnability"
+version = "0.1.0"
+description = "Research on mixture-of-Gaussians VAE priors and latent flow matching."
+requires-python = ">=3.11,<3.12"
+
+dependencies = [
+    "einops",
+    "matplotlib",
+    "numpy",
+    "pillow",
+    "pyyaml",
+    "seaborn",
+    "torch",
+    "torchvision",
+    "tqdm",
+]
+
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
+]
+
+
+[build-system]
+requires = ["setuptools>=72.0"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["latent_learnability*"]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+addopts = [
+    "--cov=latent_learnability",
+    "--cov-report=term-missing",
+]
+
+
+[tool.ruff]
+line-length = 120
+
+
+[tool.ruff.lint]
+select = [
+    "F",
+    "E",
+    "W",
+    "B",
+    "I",
+    "UP",
+    "SIM",
+]
+
+ignore = [
+    "E501",
+]
+
+
+[tool.ruff.format]
+indent-style = "space"
+docstring-code-format = true
