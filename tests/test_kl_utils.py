@@ -1,7 +1,7 @@
 import pytest
 import torch
 
-from latent_learnability.models.vae.priors.probability import (
+from latent_learnability.models.vae.priors.kl_utils import (
     raw_kl_unit,
     raw_kl_mog,
     log_normal,
