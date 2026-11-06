@@ -1,7 +1,6 @@
 import torch
 import torch.distributions as D
 
-
 class GaussianPrior:
     """Standard isotropic Gaussian latent prior."""
 
